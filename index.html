@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Blog Platform</title>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('about')">About</a></li>
+            <li><a href="#" onclick="showSection('signup')">Sign Up</a></li>
+            <li><a href="#" onclick="showSection('login')">Login</a></li>
+            <li><a href="#" onclick="showSection('profile')">Profile</a></li>
+            <li><a href="#" onclick="showSection('createPost')">Create Post</a></li>
+            <li><a href="#" onclick="showSection('post')">Post</a></li>
+            <li><a href="#" onclick="showSection('explore')">Explore</a></li>
+            <li><a href="#" onclick="showSection('settings')">Settings</a></li>
+            <li><a href="#" onclick="showSection('forgotPassword')">Forgot Password</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <h2>Home</h2>
+        <section class="recent-posts">
+            <h2>Recent Posts</h2>
+            <div class="post">
+                <h3><a href="#" onclick="showSection('post')">Post Title 1</a></h3>
+                <p class="post-meta">By <a href="#" onclick="showSection('profile')">Author Name</a> on <time datetime="2024-07-01">July 1, 2024</time></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut semper leo, ut tincidunt neque.</p>
+            </div>
+            <div class="post">
+                <h3><a href="#" onclick="showSection('post')">Post Title 2</a></h3>
+                <p class="post-meta">By <a href="#" onclick="showSection('profile')">Author Name</a> on <time datetime="2024-06-28">June 28, 2024</time></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut semper leo, ut tincidunt neque.</p>
+            </div>
+            <div class="post">
+                <h3><a href="#" onclick="showSection('post')">Post Title 3</a></h3>
+                <p class="post-meta">By <a href="#" onclick="showSection('profile')">Author Name</a> on <time datetime="2024-06-25">June 25, 2024</time></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut semper leo, ut tincidunt neque.</p>
+            </div>
+        </section>
+        <section class="featured-posts">
+            <h2>Featured Posts</h2>
+            <div class="post">
+                <h3><a href="#" onclick="showSection('post')">Featured Post 1</a></h3>
+                <p class="post-meta">By <a href="#" onclick="showSection('profile')">Author Name</a> on <time datetime="2024-07-01">July 1, 2024</time></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut semper leo, ut tincidunt neque.</p>
+            </div>
+            <div class="post">
+                <h3><a href="#" onclick="showSection('post')">Featured Post 2</a></h3>
+                <p class="post-meta">By <a href="#" onclick="showSection('profile')">Author Name</a> on <time datetime="2024-06-28">June 28, 2024</time></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut semper leo, ut tincidunt neque.</p>
+            </div>
+            <div class="post">
+                <h3><a href="#" onclick="showSection('post')">Featured Post 3</a></h3>
+                <p class="post-meta">By <a href="#" onclick="showSection('profile')">Author Name</a> on <time datetime="2024-06-25">June 25, 2024</time></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut semper leo, ut tincidunt neque.</p>
+            </div>
+        </section>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="section" style="display: none;">
+        <h2>About Us</h2>
+        <p>Welcome to Blog Platform, your go-to place for sharing stories, thoughts, and ideas with the world.</p>
+        <p>Our mission is to provide a space where anyone can express themselves freely, connect with others, and find inspiration through the power of words.</p>
+        <h3>Our Features</h3>
+        <ul>
+            <li>Easy-to-use editor for creating and publishing posts.</li>
+            <li>Commenting system to engage with readers.</li>
+            <li>Follow your favorite authors and stay updated.</li>
+            <li>Explore a diverse range of content and discover new voices.</li>
+            <li>Manage your profile and customize your experience.</li>
+        </ul>
+        <h3>Join Us</h3>
+        <p>If you haven't already, <a href="#" onclick="showSection('signup')">sign up</a> today and start your blogging journey with us. If you already have an account, <a href="#" onclick="showSection('login')">log in</a> to continue sharing your stories.</p>
+        <h3>Contact Us</h3>
+        <p>If you have any questions or feedback, feel free to reach out to us at <a href="mailto:oluyalireuben1@gmail.com">oluyalireuben1@gmail.com</a>.</p>
+    </section>
+
+    <!-- Sign Up Section -->
+    <section id="signup" class="section" style="display: none;">
+        <h2>Create an Account</h2>
+        <form id="signup-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Sign Up</button>
+            <p>Or sign up with:</p>
+            <button type="button">Google</button>
+            <button type="button">Facebook</button>
+        </form>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" class="section" style="display: none;">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+            <p><a href="#" onclick="showSection('forgotPassword')">Forgot Password?</a></p>
+        </form>
+    </section>
+
+    <!-- User Profile Section -->
+    <section id="profile" class="section" style="display: none;">
+        <div class="profile-header">
+            <img src="bin/image.jpeg" alt="Profile Picture">
+            <h2>Username</h2>
+            <button>Follow/Unfollow</button>
+        </div>
+        <div class="profile-bio">
+            <p>User's bio will be displayed here.</p>
+        </div>
+        <div class="profile-posts">
+            <h3>User's Posts</h3>
+            <!-- User's posts will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Create Post Section -->
+    <section id="createPost" class="section" style="display: none;">
+        <h2>Create a New Post</h2>
+        <form id="create-post-form">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="content">Content:</label>
+            <textarea id="content" name="content" required></textarea>
+            <label for="tags">Tags:</label>
+            <input type="text" id="tags" name="tags" placeholder="Comma separated">
+            <label for="image">Upload Image:</label>
+            <input type="file" id="image" name="image">
+            <button type="submit">Create Post</button>
+        </form>
+    </section>
+
+    <!-- Post Detail Section -->
+    <section id="post" class="section" style="display: none;">
+        <article class="post">
+            <h1>Post Title</h1>
+            <p class="post-author">By <a href="#" onclick="showSection('profile')">Author Name</a> on <time datetime="2024-08-01">August 1, 2024</time></p>
+            <div class="post-content">
+                <!-- Post content will be dynamically loaded here -->
+            </div>
+            <section class="comments">
+                <h2>Comments</h2>
+                <div class="comment-form">
+                    <label for="comment">Leave a comment:</label>
+                    <textarea id="comment" name="comment" required></textarea>
+                    <button type="submit">Submit</button>
+                </div>
+                <div class="comment-list">
+                    <!-- Comments will be dynamically loaded here -->
+                </div>
+            </section>
+        </article>
+    </section>
+
+    <!-- Explore Section -->
+    <section id="explore" class="section" style="display: none;">
+        <h2>Explore</h2>
+        <div class="search-bar">
+            <input type="text" placeholder="Search posts, tags, or users">
+            <button>Search</button>
+        </div>
+        <div class="discover">
+            <h3>Discover New Posts and Users</h3>
+            <!-- Posts and users will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Settings Section -->
+    <section id="settings" class="section" style="display: none;">
+        <h2>Account Settings</h2>
+        <form id="settings-form">
+            <label for="email">Change Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="password">Change Password:</label>
+            <input type="password" id="password" name="password">
+            <label for="notifications">Notification Settings:</label>
+            <select id="notifications" name="notifications">
+                <option value="all">All Notifications</option>
+                <option value="mentions">Only Mentions</option>
+                <option value="none">No Notifications</option>
+            </select>
+            <label for="privacy">Privacy Settings:</label>
+            <select id="privacy" name="privacy">
+                <option value="public">Public</option>
+                <option value="private">Private</option>
+            </select>
+            <button type="submit">Save Changes</button>
+        </form>
+    </section>
+
+    <!-- Forgot Password Section -->
+    <section id="forgotPassword" class="section" style="display: none;">
+        <h2>Forgot Password</h2>
+        <p>Enter your email address below and we'll send you a link to reset your password.</p>
+        <form id="forgot-password-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Send Reset Link</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Blog Platform. All rights reserved.</p>
+</footer>
+
+<script>
+    function showSection(sectionId) {
+        // Hide all sections
+        var sections = document.querySelectorAll('.section');
+        sections.forEach(function(section) {
+            section.style.display = 'none';
+        });
+
+        // Show the selected section
+        document.getElementById(sectionId).style.display = 'block';
+    }
+
+    // Function to load post details (placeholder function)
+    function loadPostDetails(postId) {
+        // Logic to load post details based on postId
+        // For now, we just show the post section
+        showSection('post');
+    }
+</script>
+
+</body>
+</html>
