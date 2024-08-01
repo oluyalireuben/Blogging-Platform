@@ -17,6 +17,9 @@ This is a single-page blogging platform where users can sign up, create posts, c
 - **Account Settings**: Lets users manage their account settings, including email, password, notifications, and privacy.
 - **Forgot Password**: Helps users reset their passwords by sending a reset link to their email.
 
+## Link to website
+https://blogging-platform-drab-eta.vercel.app/
+
 ## Technologies Used
 
 - HTML
